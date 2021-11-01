@@ -48,7 +48,7 @@ body {
     min-height: 48px;
     text-decoration: none;
     text-indent: -9999px;
-    background: url('img/logo.png') center no-repeat;
+    background: url('./img/logo.png') center no-repeat;
 }
 .header-nav__list {
     display: flex;
