@@ -125,9 +125,7 @@ body {
 }
 .intro {
     margin-top: 68px;
-    background: url('/img/intro-bg.png');
-    background-position:  center;
-    background-repeat: no-repeat;
+    background: url('/img/intro-bg.png') center no-repeat;
 }
 .intro-inner {
     padding: 90px 0 124px;
