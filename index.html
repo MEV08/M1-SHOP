@@ -12,21 +12,30 @@
     <title>M1-Shop</title>
 </head>
 <body>
-    <header class="header">
+<svg style="display: none;">
+    <symbol id="select-arrow" viewBox="0 0 17 12">
+        <g>
+            <path fill-rule="evenodd"  stroke="rgb(206, 206, 211)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter"
+            d="M14.987,2.625 L8.0,9.613 L1.12,2.625 "/>
+        </g>
+    </symbol>
+</svg>
+    <header class="header fixed">
         <div class="container">
             <div class="header-inner">
-                <a class="header-logo" href="#">
+                <a class="header-logo" href="#" id="mainLogo">
                     Dr.Harness
                 </a>
                 <nav class="header-nav" id="nav">
                     <ul class="header-nav__list">
                         <li class="header-nav__list-item">
-                            <a class="header-nav__list-link" id="navLink" href="#">
+                            <a class="header-nav__list-link" id="navLink" data-scroll=".catalog" href="#">
                                 Каталог
                             </a>
                         </li>
                         <li class="header-nav__list-item">
-                            <a class="header-nav__list-link" href="#">
+                            <a class="header-nav__list-link" href="#"
+                            data-scroll=".about">
                                 Преимущества
                             </a>
                         </li>
@@ -36,7 +45,8 @@
                             </a>
                         </li>
                         <li class="header-nav__list-item">
-                            <a class="header-nav__list-link" href="#">
+                            <a class="header-nav__list-link" href="#"
+                            data-scroll=".order">
                                 Как Заказать
                             </a>
                         </li>
@@ -247,7 +257,7 @@
                                     S
                                 </a>
                             </li>
-                            <li class="catalog-item__sizes-item active">
+                            <li class="catalog-item__sizes-item">
                                 <a class="catalog-item__sizes-link" href="#">
                                     M
                                 </a>
@@ -305,7 +315,7 @@
                                     S
                                 </a>
                             </li>
-                            <li class="catalog-item__sizes-item active">
+                            <li class="catalog-item__sizes-item">
                                 <a class="catalog-item__sizes-link" href="#">
                                     M
                                 </a>
@@ -362,7 +372,7 @@
                                     S
                                 </a>
                             </li>
-                            <li class="catalog-item__sizes-item active">
+                            <li class="catalog-item__sizes-item">
                                 <a class="catalog-item__sizes-link" href="#">
                                     M
                                 </a>
@@ -420,7 +430,7 @@
                                     S
                                 </a>
                             </li>
-                            <li class="catalog-item__sizes-item active">
+                            <li class="catalog-item__sizes-item">
                                 <a class="catalog-item__sizes-link" href="#">
                                     M
                                 </a>
@@ -478,7 +488,7 @@
                                     S
                                 </a>
                             </li>
-                            <li class="catalog-item__sizes-item active">
+                            <li class="catalog-item__sizes-item">
                                 <a class="catalog-item__sizes-link" href="#">
                                     M
                                 </a>
@@ -535,7 +545,7 @@
                                     S
                                 </a>
                             </li>
-                            <li class="catalog-item__sizes-item active">
+                            <li class="catalog-item__sizes-item">
                                 <a class="catalog-item__sizes-link" href="#">
                                     M
                                 </a>
@@ -617,6 +627,45 @@
              </div>
         </div>
     </section>
+    <div class="modal" id="modal">
+        <div class="popup">
+            <div class="popup-photo">
+                <img class="popup-photo__img" src="img/item-1.png" alt="popup-img">
+            </div>
+            <div class="popup-info">
+                <button class="popup-info__cancel" id="close" type="submit">
+                   Закрыть
+                </button>
+                <h3 class="popup-info__title">
+                    Портупея "Джони Миллер"
+                </h3>
+                <div class="popup-prices">
+                    <span class="popup-prices__old">
+                        4990р.
+                    </span>
+                    <span class="popup-prices__new">
+                        2990р.
+                    </span>
+                </div>
+                <div class="popup-info__dropdown" id="dropdown">
+                    <div class="popup-info__select">
+                    </div>
+                    <ul class="popup-info__dropdown-menu">
+                    </ul>
+                    <svg class="popup-info__select-arrow">
+                        <use xlink:href="#select-arrow"></use>
+                    </svg>
+                </div>  
+                <form action="" class="popup-info__form">
+                    <input type="text" class="popup-info__form-input" placeholder="Введите ваше имя">
+                    <input type="tel" class="popup-info__form-input" placeholder="Введите ваш телефон">
+                </form>
+                <button class="popup-info__btn">
+                    Оформить заказ
+                </button>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
 
     </footer>
