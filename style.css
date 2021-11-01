@@ -48,7 +48,7 @@ body {
     min-height: 48px;
     text-decoration: none;
     text-indent: -9999px;
-    background: url('/img/logo.png') center no-repeat;
+    background: url('img/logo.png') center no-repeat;
 }
 .header-nav__list {
     display: flex;
@@ -125,7 +125,7 @@ body {
 }
 .intro {
     margin-top: 68px;
-    background: url('/img/intro-bg.png') center no-repeat;
+    background: url('img/intro-bg.png') center no-repeat;
 }
 .intro-inner {
     padding: 90px 0 124px;
@@ -314,7 +314,7 @@ body {
 }
 .sizes {
     padding: 41px 0 50px;
-    background: url('/img/sizes.png') center no-repeat;
+    background: url('img/sizes.png') center no-repeat;
 }
 .sizes-wrapper {
     padding: 30px;
