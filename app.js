@@ -7,8 +7,22 @@ const modal = document.querySelector('#modal');
 const body = document.querySelector('body');
 const close = document.querySelector('#close');
 const mainLogo = document.querySelector('#mainLogo');
+const introBtns = document.querySelectorAll('.intro-btn[data-go]');
+const introCas = document.querySelector('#introCas');
+const introEro = document.querySelector('#introEro');
+const casual = document.querySelector('#casual');
+const erotic = document.querySelector('#erotic');
+const catalogItems = document.querySelectorAll('.catalog-item');
+const getOrder = document.querySelector('#getOrder');
 
-
+casual.closest('li').classList.add('active');
+catalogItems.forEach(item => {
+    if (item.classList.contains('casual')) {
+        item.style.display = 'block';
+    } else {
+        item.style.display = 'none';
+    }
+})
 function removeSize() {
     sizesItem.forEach(item => {
         item.classList.remove('active')
@@ -18,7 +32,9 @@ function menuLinkClick(e) {
     const menuLink = e.target;
     if (menuLink.dataset.scroll && document.querySelector(menuLink.dataset.scroll)) {
         const scroll = document.querySelector(menuLink.dataset.scroll);
+        console.log(scroll)
         const scrollToValue = scroll.getBoundingClientRect().top + scrollY - document.querySelector('.header').offsetHeight;
+        console.log(scrollToValue)
         window.scrollTo({
             top: scrollToValue,
             behavior: 'smooth'
@@ -28,6 +44,10 @@ function menuLinkClick(e) {
         nav.classList.toggle('show');
     }
 }
+// function introBtnClick(e) {
+//     const introBtn = e.target;
+    
+// }
 function openModal() {
     modal.classList.add('open');
     body.classList.add('no-scroll');
@@ -36,6 +56,33 @@ function closeModal() {
     modal.classList.remove('open');
     body.classList.remove('no-scroll');
 }
+function openErotic() {
+    if (casual.closest('.catalog-nav__list-item').classList.contains('active')) {
+        casual.closest('.catalog-nav__list-item').classList.remove('active');
+        erotic.closest('.catalog-nav__list-item').classList.add('active');
+        catalogItems.forEach(item => {
+            if (item.classList.contains('casual')) {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'block';
+            }
+        })
+    }
+}
+function openCasual() {
+    if (erotic.closest('.catalog-nav__list-item').classList.contains('active')) {
+        erotic.closest('.catalog-nav__list-item').classList.remove('active');
+        casual.closest('.catalog-nav__list-item').classList.add('active');
+        catalogItems.forEach(item => {
+            if (item.classList.contains('erotic')) {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'block';
+            }
+        })
+    }
+}
+
 mainLogo.addEventListener('click', () => {
     if (nav.classList.contains('show')) {
         nav.classList.remove('show');
@@ -51,6 +98,31 @@ if (navLinks.length > 0) {
         item.addEventListener('click', menuLinkClick);
     });
 };
+introBtns.forEach(item => {
+    item.addEventListener('click', (item) => {
+        const link = item.target;
+        const goTo = document.querySelector(link.dataset.go);
+        const goToValue = goTo.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+        window.scrollTo({
+            top: goToValue,
+            behavior: 'smooth'
+        });
+    });
+});
+introCas.addEventListener('click', () => {
+    openCasual();
+})
+introEro.addEventListener('click', () => {
+    openErotic();
+})
+erotic.addEventListener('click', (e) => {
+    e.preventDefault();
+    openErotic();
+});
+casual.addEventListener('click', (e) => {
+    e.preventDefault();
+    openCasual();
+});
 sizesItem.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
@@ -66,11 +138,14 @@ orderBtns.forEach(item => {
 close.addEventListener('click', () => {
     closeModal();
 }); 
-modal.addEventListener('click', event => {
+modal.addEventListener('click', () => {
     let popup = modal.querySelector('.popup');
     popup.addEventListener('click', e => {
         e.stopPropagation();
     })
+    closeModal();
+});
+getOrder.addEventListener('click', () => {
     closeModal();
 })
 

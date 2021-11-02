@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
     <title>M1-Shop</title>
 </head>
 <body>
@@ -83,10 +83,10 @@
                     </div>                
                 </div>
                 <div class="intro-btns">
-                    <button class="intro-btn" type="submit">
+                    <button class="intro-btn" type="button" id="introCas" data-go=".catalog">
                         Повседневные портупеи
                     </button>
-                    <button class="intro-btn" type="submit">
+                    <button class="intro-btn" type="button" id="introEro" data-go=".catalog">
                         Эротические портупеи
                     </button>
                 </div>
@@ -224,20 +224,20 @@
             </h2>
             <nav class="catalog-nav">
                 <ul class="catalog-nav__list">
-                    <li class="catalog-nav__list-item active">
-                        <a class="catalog-nav__list-link" href="#">
+                    <li class="catalog-nav__list-item">
+                        <a class="catalog-nav__list-link" href="#" id="casual">
                             Повседневные Портупеи
                         </a>
                     </li>
                     <li class="catalog-nav__list-item">
-                        <a class="catalog-nav__list-link" href="#">
+                        <a class="catalog-nav__list-link" href="#" id="erotic">
                             Эротические Портупеи
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="catalog-wrapper">
-                <div class="catalog-item">
+                <div class="catalog-item casual">
                     <img class="catalog-item__img" src="img/item-1.png" alt="item-img">
                     <div class="catalog-item__discount">
                         -53%
@@ -279,8 +279,8 @@
                             </li>
                         </ul>
                         <div class="catalog-item__colors">
-                            <div class="catalog-item__colors-circle black"></div>
-                            <div class="catalog-item__colors-circle red"></div>
+                            <button class="catalog-item__colors-btn black" type="button"></button>
+                            <button class="catalog-item__colors-btn red" type="button"></button>
                         </div>
                         <div class="catalog-item__prices">
                             <span class="catalog-item__prices-old">
@@ -295,7 +295,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item casual">
                     <img class="catalog-item__img" src="img/item-2.png" alt="item-img">
                     <div class="catalog-item__discount">
                         -53%
@@ -337,7 +337,7 @@
                             </li>
                         </ul>
                         <div class="catalog-item__colors">
-                            <div class="catalog-item__colors-circle black"></div>
+                            <button class="catalog-item__colors-btn black" type="button"></button>
                         </div>
                         <div class="catalog-item__prices">
                             <span class="catalog-item__prices-old">
@@ -352,7 +352,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item casual">
                     <img class="catalog-item__img" src="img/item-3.png" alt="item-img">
                     <div class="catalog-item__discount">
                         -53%
@@ -394,8 +394,8 @@
                             </li>
                         </ul>
                         <div class="catalog-item__colors">
-                            <div class="catalog-item__colors-circle black"></div>
-                            <div class="catalog-item__colors-circle red"></div>
+                            <button class="catalog-item__colors-btn black" type="button"></button>
+                            <button class="catalog-item__colors-btn red" type="button"></button>
                         </div>
                         <div class="catalog-item__prices">
                             <span class="catalog-item__prices-old">
@@ -410,7 +410,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item casual">
                     <img class="catalog-item__img" src="img/item-1.png" alt="item-img">
                     <div class="catalog-item__discount">
                         -53%
@@ -452,8 +452,8 @@
                             </li>
                         </ul>
                         <div class="catalog-item__colors">
-                            <div class="catalog-item__colors-circle black"></div>
-                            <div class="catalog-item__colors-circle red"></div>
+                            <button class="catalog-item__colors-btn black" type="button"></button>
+                            <button class="catalog-item__colors-btn red" type="button"></button>
                         </div>
                         <div class="catalog-item__prices">
                             <span class="catalog-item__prices-old">
@@ -468,7 +468,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item casual">
                     <img class="catalog-item__img" src="img/item-2.png" alt="item-img">
                     <div class="catalog-item__discount">
                         -53%
@@ -510,7 +510,7 @@
                             </li>
                         </ul>
                         <div class="catalog-item__colors">
-                            <div class="catalog-item__colors-circle black"></div>
+                            <button class="catalog-item__colors-btn black" type="button"></button>
                         </div>
                         <div class="catalog-item__prices">
                             <span class="catalog-item__prices-old">
@@ -525,7 +525,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item casual">
                     <img class="catalog-item__img" src="img/item-3.png" alt="item-img">
                     <div class="catalog-item__discount">
                         -53%
@@ -567,8 +567,181 @@
                             </li>
                         </ul>
                         <div class="catalog-item__colors">
-                            <div class="catalog-item__colors-circle black"></div>
-                            <div class="catalog-item__colors-circle red"></div>
+                            <button class="catalog-item__colors-btn black" type="button"></button>
+                            <button class="catalog-item__colors-btn red" type="button"></button>
+                        </div>
+                        <div class="catalog-item__prices">
+                            <span class="catalog-item__prices-old">
+                                4990р.
+                            </span>
+                            <span class="catalog-item__prices-new">
+                                2990р.
+                            </span>
+                        </div>
+                        <button class="catalog-item__btn">
+                            Заказать
+                        </button>
+                    </div>
+                </div>
+                <div class="catalog-item erotic">
+                    <img class="catalog-item__img" src="img/item-1.png" alt="item-img">
+                    <div class="catalog-item__discount">
+                        -53%
+                    </div>
+                    <div class="catalog-item__info">
+                        <h4 class="catalog-item__title">
+                            Портупея “Линда”
+                        </h4>
+                        <ul class="catalog-item__sizes">
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    XS
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    S
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    M
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    L
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item absent">
+                                <a class="catalog-item__sizes-link" href="#" title="Отсутствует">
+                                    XL
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item absent">
+                                <a class="catalog-item__sizes-link" href="#" title="Отсутствует">
+                                    XXL
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="catalog-item__colors">
+                            <button class="catalog-item__colors-btn black" type="button"></button>
+                            <button class="catalog-item__colors-btn red" type="button"></button>
+                        </div>
+                        <div class="catalog-item__prices">
+                            <span class="catalog-item__prices-old">
+                                4990р.
+                            </span>
+                            <span class="catalog-item__prices-new">
+                                2990р.
+                            </span>
+                        </div>
+                        <button class="catalog-item__btn">
+                            Заказать
+                        </button>
+                    </div>
+                </div>
+                <div class="catalog-item erotic">
+                    <img class="catalog-item__img" src="img/item-2.png" alt="item-img">
+                    <div class="catalog-item__discount">
+                        -53%
+                    </div>
+                    <div class="catalog-item__info">
+                        <h4 class="catalog-item__title">
+                            Портупея “Макси”
+                        </h4>
+                        <ul class="catalog-item__sizes">
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    XS
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    S
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    M
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    L
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    XL
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    XXL
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="catalog-item__colors">
+                            <button class="catalog-item__colors-btn black" type="button"></button>
+                        </div>
+                        <div class="catalog-item__prices">
+                            <span class="catalog-item__prices-old">
+                                4990р.
+                            </span>
+                            <span class="catalog-item__prices-new">
+                                2990р.
+                            </span>
+                        </div>
+                        <button class="catalog-item__btn">
+                            Заказать
+                        </button>
+                    </div>
+                </div>
+                <div class="catalog-item erotic">
+                    <img class="catalog-item__img" src="img/item-3.png" alt="item-img">
+                    <div class="catalog-item__discount">
+                        -53%
+                    </div>
+                    <div class="catalog-item__info">
+                        <h4 class="catalog-item__title">
+                            Портупея “Джони”
+                        </h4>
+                        <ul class="catalog-item__sizes">
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    XS
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    S
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    M
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item">
+                                <a class="catalog-item__sizes-link" href="#">
+                                    L
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item absent">
+                                <a class="catalog-item__sizes-link" href="#" title="Отсутствует">
+                                    XL
+                                </a>
+                            </li>
+                            <li class="catalog-item__sizes-item absent">
+                                <a class="catalog-item__sizes-link" href="#" title="Отсутствует">
+                                    XXL
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="catalog-item__colors">
+                            <button class="catalog-item__colors-btn black" type="button"></button>
+                            <button class="catalog-item__colors-btn red" type="button"></button>
                         </div>
                         <div class="catalog-item__prices">
                             <span class="catalog-item__prices-old">
@@ -659,10 +832,10 @@
                 <form action="" class="popup-info__form">
                     <input type="text" class="popup-info__form-input" placeholder="Введите ваше имя">
                     <input type="tel" class="popup-info__form-input" placeholder="Введите ваш телефон">
+                    <button class="popup-info__btn" id="getOrder">
+                        Оформить заказ
+                    </button>
                 </form>
-                <button class="popup-info__btn">
-                    Оформить заказ
-                </button>
             </div>
         </div>
     </div>
