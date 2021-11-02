@@ -44,10 +44,6 @@ function menuLinkClick(e) {
         nav.classList.toggle('show');
     }
 }
-// function introBtnClick(e) {
-//     const introBtn = e.target;
-    
-// }
 function openModal() {
     modal.classList.add('open');
     body.classList.add('no-scroll');
